@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bdp-4j-0Iz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XW3-GC-oTJ">
+            <objects>
+                <viewController id="krz-Eg-Dny" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uVk-gm-0Tl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cdj-Wc-De6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gZx-FW-6YR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-sP-dun">
+                                <frame key="frameInset" minX="164" minY="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8kb-kS-46T">
+                                <frame key="frameInset" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8JS-EL-LQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327" y="147"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="aVt-0l-TJn">
+            <objects>
+                <viewController id="BLA-Ek-a1s" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1OZ-u4-f78"/>
+                        <viewControllerLayoutGuide type="bottom" id="rC8-WZ-hGo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W6f-bf-nRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="TabbarIcon_SearchA" id="zNG-WO-eoD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9D-NH-Fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="471"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="h1i-PB-hUt">
+            <objects>
+                <viewController id="Rkp-rX-2Hw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zte-9Q-Z1X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eig-aa-OC6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cyr-w2-RKR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="TabbarIcon_Search" id="gOK-d3-QGr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZI6-w3-M6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="-184"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="y2u-zK-N8D">
+            <objects>
+                <tabBarController id="Bdp-4j-0Iz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Au5-gW-dem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Rkp-rX-2Hw" kind="relationship" relationship="viewControllers" id="Aqh-G9-pnE"/>
+                        <segue destination="BLA-Ek-a1s" kind="relationship" relationship="viewControllers" id="Wqv-ap-Saq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ut-s5-FBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabbarIcon_Search" width="25" height="25"/>
+        <image name="TabbarIcon_SearchA" width="25" height="25"/>
+    </resources>
+</document>

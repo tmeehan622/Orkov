@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "023B24B543D26EA01868A0CDBEFBFAB8B1311693",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "c477de41-bf08-484b-9d75-88be6b687a21" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "023B24B543D26EA01868A0CDBEFBFAB8B1311693" : 9223372036854775807,
+    "c477de41-bf08-484b-9d75-88be6b687a21" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1DB204C3-1E9F-46C1-9E19-CDA0BA51F593",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "023B24B543D26EA01868A0CDBEFBFAB8B1311693" : "Orkov_2017\/",
+    "c477de41-bf08-484b-9d75-88be6b687a21" : "Orkov2011\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Pubmed Experiment",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Pubmed Experiment.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "visualsoftinc.sourcerepo.com:visualsoftinc\/Orkov_2017.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "023B24B543D26EA01868A0CDBEFBFAB8B1311693"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/visualsoftinc.sourcerepo.com\/visualsoftinc\/Orkov2011",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "c477de41-bf08-484b-9d75-88be6b687a21"
+    }
+  ]
+}

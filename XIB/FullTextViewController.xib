@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4112" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullTextViewController">
+            <connections>
+                <outlet property="backButton" destination="60" id="65"/>
+                <outlet property="bookmarkButton" destination="8" id="54"/>
+                <outlet property="busy" destination="20" id="24"/>
+                <outlet property="busyText" destination="22" id="50"/>
+                <outlet property="contentView" destination="74" id="75"/>
+                <outlet property="dumpButton" destination="15" id="17"/>
+                <outlet property="emailButton" destination="10" id="55"/>
+                <outlet property="forwardButton" destination="59" id="66"/>
+                <outlet property="fullTextView" destination="4" id="5"/>
+                <outlet property="jumpPicker" destination="36" id="41"/>
+                <outlet property="jumpPickerContainer" destination="34" id="40"/>
+                <outlet property="myToolbar" destination="6" id="49"/>
+                <outlet property="pdfButton" destination="51" id="53"/>
+                <outlet property="popUpImage" destination="25" id="26"/>
+                <outlet property="refreshButton" destination="58" id="67"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="webToolbar" destination="56" id="61"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="BackgroundView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
+                    <subviews>
+                        <webView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <dataDetectorType key="dataDetectorTypes"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="19"/>
+                            </connections>
+                        </webView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="4" firstAttribute="leading" secondItem="74" secondAttribute="leading" id="5ku-PP-S04"/>
+                        <constraint firstItem="4" firstAttribute="top" secondItem="74" secondAttribute="top" id="C2j-dH-9qh"/>
+                        <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="Etb-GQ-8QP"/>
+                        <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="rVZ-kx-51e"/>
+                    </constraints>
+                </view>
+                <imageView hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="25" customClass="PopUpImage">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="450" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="0.0" y="328" width="320" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fT4-TL-dCp"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem image="Misc_BackButton" id="47">
+                            <connections>
+                                <action selector="searchButton:" destination="-1" id="48"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="Misc_EmailButton" id="10">
+                            <connections>
+                                <action selector="sendAsEmail:" destination="-1" id="13"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="Misc_OpenBook" id="8">
+                            <connections>
+                                <action selector="addAsBookmark:" destination="-1" id="14"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem tag="100" image="Misc_Download" id="51">
+                            <connections>
+                                <action selector="saveAsPDF:" destination="-1" id="52"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="16"/>
+                        <barButtonItem title="Related" id="15">
+                            <connections>
+                                <action selector="getRelated:" destination="-1" id="46"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="0.094292044639587402" green="0.20260016620159149" blue="0.641274094581604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </toolbar>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                    <rect key="frame" x="47.5" y="176" width="225" height="20.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="Loading Full Text Article..." lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                            <rect key="frame" x="28" y="0.0" width="197" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.36858397722244263" green="0.36865249276161194" blue="0.36857965588569641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" id="EdE-bO-87h"/>
+                        <constraint firstItem="22" firstAttribute="leading" secondItem="21" secondAttribute="trailing" constant="8" id="Scl-zQ-MJ0"/>
+                        <constraint firstItem="21" firstAttribute="leading" secondItem="20" secondAttribute="leading" id="TI3-1V-N4C"/>
+                        <constraint firstItem="22" firstAttribute="top" secondItem="20" secondAttribute="top" id="lYf-Va-3pS"/>
+                        <constraint firstItem="21" firstAttribute="centerY" secondItem="20" secondAttribute="centerY" id="qNa-QE-I3s"/>
+                        <constraint firstAttribute="bottom" secondItem="22" secondAttribute="bottom" id="wut-W0-cmz"/>
+                    </constraints>
+                </view>
+                <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4KE-Np-B3g"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem image="Misc_LeftTriangle" id="60">
+                            <connections>
+                                <action selector="back:" destination="-1" id="62"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="Misc_RightTriangle" id="59">
+                            <connections>
+                                <action selector="next:" destination="-1" id="63"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="57"/>
+                        <barButtonItem title="Item" image="Misc_Refresh" id="58">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="64"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="0.094194129109382629" green="0.19944870471954346" blue="0.63243037462234497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </toolbar>
+                <view hidden="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34" customClass="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="328"/>
+                    <subviews>
+                        <pickerView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                            <rect key="frame" x="0.0" y="44" width="320" height="284"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="44"/>
+                                <outlet property="delegate" destination="-1" id="45"/>
+                            </connections>
+                        </pickerView>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="HFK-xO-yc4"/>
+                            </constraints>
+                            <items>
+                                <barButtonItem title="Cancel" id="37">
+                                    <connections>
+                                        <action selector="cancelJump:" destination="-1" id="42"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="38"/>
+                                <barButtonItem title="Go" id="39">
+                                    <connections>
+                                        <action selector="doJump:" destination="-1" id="43"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                            <color key="tintColor" red="0.041911337524652481" green="0.10408758372068405" blue="0.22853630781173706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </toolbar>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="36" firstAttribute="top" secondItem="35" secondAttribute="bottom" id="5o9-Qs-bHb"/>
+                        <constraint firstItem="35" firstAttribute="leading" secondItem="34" secondAttribute="leading" id="7E5-yU-YkY"/>
+                        <constraint firstAttribute="bottom" secondItem="36" secondAttribute="bottom" id="CvH-pl-pfU"/>
+                        <constraint firstAttribute="trailing" secondItem="36" secondAttribute="trailing" id="MMR-9C-ctY"/>
+                        <constraint firstItem="36" firstAttribute="leading" secondItem="34" secondAttribute="leading" id="OgF-9q-Gz7"/>
+                        <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" id="Var-hV-A7S"/>
+                        <constraint firstItem="35" firstAttribute="top" secondItem="34" secondAttribute="top" id="h3p-03-DGk"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71" customClass="AboutTouchPanel">
+                    <rect key="frame" x="0.0" y="294" width="320" height="34"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="71" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="40A-N7-NZj"/>
+                <constraint firstItem="34" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="8MI-s5-3hI"/>
+                <constraint firstAttribute="trailing" secondItem="74" secondAttribute="trailing" id="97r-pG-Ob1"/>
+                <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" id="A27-Li-PRx"/>
+                <constraint firstItem="6" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="BFV-wg-MtS"/>
+                <constraint firstAttribute="trailing" secondItem="71" secondAttribute="trailing" id="FZs-Ll-v3W"/>
+                <constraint firstItem="34" firstAttribute="top" secondItem="1" secondAttribute="top" id="IVT-52-oZP"/>
+                <constraint firstItem="56" firstAttribute="top" secondItem="1" secondAttribute="top" id="LGU-Kp-eFZ"/>
+                <constraint firstItem="74" firstAttribute="top" secondItem="1" secondAttribute="top" id="Qzc-CF-sat"/>
+                <constraint firstAttribute="trailing" secondItem="6" secondAttribute="trailing" id="RmE-Hn-y8v"/>
+                <constraint firstItem="74" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="RuD-26-EAO"/>
+                <constraint firstItem="56" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UFz-NL-B3w"/>
+                <constraint firstItem="20" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="UuM-aV-RlX"/>
+                <constraint firstItem="25" firstAttribute="top" secondItem="1" secondAttribute="top" id="VvT-W9-ti0"/>
+                <constraint firstItem="34" firstAttribute="bottom" secondItem="6" secondAttribute="top" id="Xqs-L7-6wN"/>
+                <constraint firstItem="25" firstAttribute="bottom" secondItem="6" secondAttribute="top" id="fHT-l5-PY1"/>
+                <constraint firstAttribute="trailing" secondItem="34" secondAttribute="trailing" id="hru-kk-4vE"/>
+                <constraint firstItem="74" firstAttribute="bottom" secondItem="6" secondAttribute="top" id="i8o-hd-QRG"/>
+                <constraint firstAttribute="trailing" secondItem="56" secondAttribute="trailing" id="jwS-y4-4tU"/>
+                <constraint firstItem="25" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="l1c-18-9Ah"/>
+                <constraint firstAttribute="trailing" secondItem="25" secondAttribute="trailing" id="liQ-1H-qls"/>
+                <constraint firstItem="71" firstAttribute="bottom" secondItem="6" secondAttribute="top" id="qvl-hb-e6O"/>
+                <constraint firstItem="20" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="r7y-wX-qQv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Misc_BackButton" width="13" height="12"/>
+        <image name="Misc_Download" width="20" height="20"/>
+        <image name="Misc_EmailButton" width="26" height="20"/>
+        <image name="Misc_LeftTriangle" width="13" height="20"/>
+        <image name="Misc_OpenBook" width="26" height="20"/>
+        <image name="Misc_Refresh" width="20" height="20"/>
+        <image name="Misc_RightTriangle" width="13" height="20"/>
+    </resources>
+</document>

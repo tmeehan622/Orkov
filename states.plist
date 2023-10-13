@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>countries</key>
+	<dict>
+		<key>Afghanistan</key>
+		<string>af</string>
+		<key>Albania</key>
+		<string>al</string>
+		<key>Algeria</key>
+		<string>dz</string>
+		<key>American Samoa</key>
+		<string>as</string>
+		<key>Andorra</key>
+		<string>ad</string>
+		<key>Angola</key>
+		<string>ao</string>
+		<key>Antarctica</key>
+		<string>aq</string>
+		<key>Anguilla</key>
+		<string>ai</string>
+		<key>Antigua and Barbuda</key>
+		<string>ag</string>
+		<key>Argentina</key>
+		<string>ar</string>
+		<key>Armenia</key>
+		<string>am</string>
+		<key>Aruba</key>
+		<string>aw</string>
+		<key>Australia</key>
+		<string>au</string>
+		<key>Austria</key>
+		<string>at</string>
+		<key>Azerbaijan</key>
+		<string>az</string>
+		<key>Bahamas</key>
+		<string>bs</string>
+		<key>Bahrain</key>
+		<string>bh</string>
+		<key>Bangladesh</key>
+		<string>bd</string>
+		<key>Barbados</key>
+		<string>bb</string>
+		<key>Belarus</key>
+		<string>by</string>
+		<key>Belgium</key>
+		<string>be</string>
+		<key>Belize</key>
+		<string>bz</string>
+		<key>Benin</key>
+		<string>bj</string>
+	</dict>
+	<key>states</key>
+	<dict>
+		<key>Alabama</key>
+		<string>al</string>
+		<key>Alaska</key>
+		<string>ak</string>
+		<key>Arizona</key>
+		<string>az</string>
+		<key>Arkansas</key>
+		<string>ar</string>
+		<key>California</key>
+		<string>ca</string>
+		<key>Colorado</key>
+		<string>co</string>
+		<key>Connecticut</key>
+		<string>ct</string>
+		<key>Delaware</key>
+		<string>de</string>
+		<key>Florida</key>
+		<string>fl</string>
+		<key>Georgia</key>
+		<string>ga</string>
+		<key>Hawaii</key>
+		<string>hi</string>
+		<key>Idaho</key>
+		<string>id</string>
+		<key>Illinois</key>
+		<string>il</string>
+		<key>Indiana</key>
+		<string>in</string>
+		<key>Iowa</key>
+		<string>ia</string>
+		<key>Kansas</key>
+		<string>ks</string>
+		<key>Kentucky</key>
+		<string>ky</string>
+		<key>Louisiana</key>
+		<string>la</string>
+		<key>Maine</key>
+		<string>me</string>
+		<key>Maryland</key>
+		<string>md</string>
+		<key>Massachusetts</key>
+		<string>ma</string>
+		<key>Michigan</key>
+		<string>mi</string>
+		<key>Minnesota</key>
+		<string>mn</string>
+		<key>Mississippi</key>
+		<string>ms</string>
+		<key>Missouri</key>
+		<string>mo</string>
+		<key>Montana</key>
+		<string>mt</string>
+		<key>Nebraska</key>
+		<string>ne</string>
+		<key>Nevada</key>
+		<string>nv</string>
+		<key>New Hampshire</key>
+		<string>nh</string>
+		<key>New Jersey</key>
+		<string>nj</string>
+		<key>New Mexico</key>
+		<string>nm</string>
+		<key>New York</key>
+		<string>ny</string>
+		<key>North Carolina</key>
+		<string>nc</string>
+		<key>North Dakota</key>
+		<string>nd</string>
+		<key>Ohio</key>
+		<string>oh</string>
+		<key>Oklahoma</key>
+		<string>ok</string>
+		<key>Oregon</key>
+		<string>or</string>
+		<key>Pennsylvania</key>
+		<string>pa</string>
+		<key>Puerto Rico</key>
+		<string>pr</string>
+		<key>Rhode Island</key>
+		<string>ri</string>
+		<key>South Carolina</key>
+		<string>sc</string>
+		<key>South Dakota</key>
+		<string>sd</string>
+		<key>Tennessee</key>
+		<string>tn</string>
+		<key>Texas</key>
+		<string>tx</string>
+		<key>Utah</key>
+		<string>ut</string>
+		<key>Vermont</key>
+		<string>vt</string>
+		<key>Virginia</key>
+		<string>va</string>
+		<key>Washington</key>
+		<string>wa</string>
+		<key>Washington D.C.</key>
+		<string>dc</string>
+		<key>West Virginia</key>
+		<string>wv</string>
+		<key>Wisconsin</key>
+		<string>wi</string>
+		<key>Wyoming</key>
+		<string>wy</string>
+	</dict>
+</dict>
+</plist>

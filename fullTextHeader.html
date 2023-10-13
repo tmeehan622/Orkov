@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.xxtitle {
+	font-size: large;
+	font-weight: bold;
+}
+caption {
+	font-style: italic;
+}
+.bluebartitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 125%;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #003399;
+	text-align: center;
+	width: 100%;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+sec .bluebartitle {
+	font-size: large;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+	background-color: #ffffff;
+}
+
+
+
+.title {
+	font-size: large;
+	font-weight: bold;
+}
+
+.xtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 125%;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #003399;
+	text-align: center;
+	width: 100%;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+xsec .title {
+	font-size: large;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+	background-color: #ffffff;
+}
+
+abstract .title, 
+sec .title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 125;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #003399;
+	text-align: center;
+	width: 100;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+
+abstract sec .title, 
+sec sec .title {
+	font-size: large;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+	background-color: #ffffff;
+}
+
+
+.fm-title {
+	font-family: Arial, sans-serif;
+	font-size: 125%;
+	font-weight: bold
+}
+.head-separate {
+	margin-bottom: 1.2em;
+}
+.abs-head2, .kwd-label {
+	font-weight: bold
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.fm-author {
+	font-family: Arial, sans-serif;
+	font-size: 80%;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+.fm-copyright {
+	font-family: Arial, sans-serif;
+	font-size: 75%
+}
+
+sup, sub {
+    font-size: .8em;
+    line-height: 0.8em;
+    white-space :nowrap;
+}
+
+.doc-number {color: #990033}
+
+.fm-affl,
+.fm-footnote,
+.fm-editor {
+	font-family: Arial, sans-serif;
+	font-size: 80%;
+    font-weight: normal;
+    color: #5e5e5e !important;
+}
+.orkovFigure {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dotted;
+	border-right-style: dotted;
+	border-bottom-style: dotted;
+	border-left-style: dotted;
+	padding: 0px;
+	margin-bottom: 8px;
+}
+
+.orkovFigure label {
+	color: #0000FF;
+}
+
+.orkovFigure p {
+	font-size: smaller;
+}
+
+-->
+</style>
+<script language="javascript">
+var anchorArray = new Array();
+
+function findSections()
+{
+	var sections = document.getElementsByTagName('sec');
+//	alert('found '+sections.length+' sections');
+	
+	var titles = document.getElementsByClassName('title');
+//	alert('found '+titles.length+' titles');
+	for(var i=0;i<titles.length;i++) {
+		var node = titles[i];
+		var extraSpace = "";
+		if(node.parentNode.tagName == "SEC")
+			extraSpace = "_";
+		var anchorName = extraSpace+node.innerHTML;
+		var thisAnchor = document.createElement('a');
+		thisAnchor.setAttribute('name',anchorName);
+		node.parentNode.insertBefore(thisAnchor, node);
+		anchorArray[i] = anchorName;
+		}
+}
+
+function getAnchors()
+{
+	var anchorStrings = "";
+	var aCount = anchorArray.length;
+	
+	for(var i=0;i<aCount;i++)
+	{
+		anchorStrings += anchorArray[i];
+		if(i != aCount -1)
+			anchorStrings += "#;*";
+	}
+	
+	return anchorStrings;
+}
+	</script>
+
+</head>

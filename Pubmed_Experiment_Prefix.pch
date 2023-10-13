@@ -1,0 +1,23 @@
+//
+// Prefix header for all source files of the 'Pubmed Experiment' target in the 'Pubmed Experiment' project
+//
+#import <Availability.h>
+#import "Flurry.h"
+#import "logging.h"
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+//#define	ORKOV_TINT_COLOR [UIColor colorWithRed:11.0/256.0 green:42.0/256.0 blue:85.0/256.0 alpha:1]
+//#define	ORKOV_BG_COLOR [UIColor colorWithRed:50.0/256.0 green:75.0/256.0 blue:128.0/256.0 alpha:1]
+//#define	ORKOV_TINT_COLOR [UIColor colorWithRed:65.0/256.0 green:166.0/256.0 blue:222.0/256.0 alpha:1]
+#define	ORKOV_TINT_COLOR [UIColor colorWithRed:31.0/256.0 green:74.0/256.0 blue:180.0/256.0 alpha:1]
+//#define	ORKOV_BG_COLOR [UIColor colorWithHue:221.0/360.0 saturation:0.73 brightness:0.78 alpha:1]
+#define	ORKOV_BG_COLOR [UIColor colorWithHue:0 saturation:0 brightness:0.9 alpha:1]

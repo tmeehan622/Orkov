@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4112" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsController">
+            <connections>
+                <outlet property="backButton" destination="16" id="23"/>
+                <outlet property="busy" destination="6" id="7"/>
+                <outlet property="contentView" destination="36" id="44"/>
+                <outlet property="myToolbar" destination="15" id="33"/>
+                <outlet property="nextButton" destination="20" id="24"/>
+                <outlet property="noHits" destination="27" id="30"/>
+                <outlet property="searchListView" destination="8" id="37"/>
+                <outlet property="statsLabel" destination="21" id="22"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="BackgroundView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                    <subviews>
+                        <tableView hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" tag="99" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="0.0" sectionFooterHeight="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="10"/>
+                                <outlet property="delegate" destination="-1" id="11"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="8" firstAttribute="top" secondItem="36" secondAttribute="top" id="HM4-Zp-oyF"/>
+                        <constraint firstItem="8" firstAttribute="leading" secondItem="36" secondAttribute="leading" id="Lj4-ju-DPT"/>
+                        <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" id="REI-NB-uJV"/>
+                        <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="cJI-7T-k76"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40" customClass="AboutTouchPanel">
+                    <rect key="frame" x="0.0" y="338" width="320" height="34"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                    <rect key="frame" x="116" y="372" width="140" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                    <rect key="frame" x="71" y="188" width="178" height="40"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                            <rect key="frame" x="0.0" y="10" width="20" height="20"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="Retrieving Records..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4">
+                            <rect key="frame" x="28" y="10" width="150" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="QsC-2N-6Oz"/>
+                        <constraint firstItem="4" firstAttribute="leading" secondItem="5" secondAttribute="trailing" constant="8" id="fdv-pW-gz1"/>
+                        <constraint firstItem="4" firstAttribute="centerY" secondItem="6" secondAttribute="centerY" id="gKk-ps-UEn"/>
+                        <constraint firstAttribute="height" constant="40" id="jUf-uV-qhn"/>
+                        <constraint firstItem="5" firstAttribute="centerY" secondItem="6" secondAttribute="centerY" id="ms8-vp-XKZ"/>
+                        <constraint firstItem="5" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="pNN-RL-Vpv"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                    <rect key="frame" x="20" y="188.5" width="280" height="39.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="No full text articles are available for this set of records." lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="29">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="39.5"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                            <color key="textColor" red="0.40000001000000002" green="0.80000000999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="29" secondAttribute="trailing" id="bE2-pg-qsP"/>
+                        <constraint firstAttribute="bottom" secondItem="29" secondAttribute="bottom" id="gOq-Vm-KOI"/>
+                        <constraint firstItem="29" firstAttribute="leading" secondItem="27" secondAttribute="leading" id="kek-1L-Npr"/>
+                        <constraint firstItem="29" firstAttribute="top" secondItem="27" secondAttribute="top" id="lgk-FU-EMe"/>
+                    </constraints>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="450" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15">
+                    <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                    <items>
+                        <barButtonItem image="Misc_BackButton" id="31">
+                            <connections>
+                                <action selector="searchButton:" destination="-1" id="32"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Back" id="16">
+                            <connections>
+                                <action selector="doBackButton:" destination="-1" id="25"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="19"/>
+                        <barButtonItem title="Next" id="20">
+                            <connections>
+                                <action selector="doNextButton:" destination="-1" id="26"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="0.096972838044166565" green="0.20534957945346832" blue="0.65459674596786499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="15" firstAttribute="top" secondItem="40" secondAttribute="bottom" id="20E-os-fO1"/>
+                <constraint firstItem="36" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="BcV-cb-64H"/>
+                <constraint firstAttribute="trailing" secondItem="15" secondAttribute="trailing" id="Bxt-Aw-6fL"/>
+                <constraint firstAttribute="trailing" secondItem="40" secondAttribute="trailing" id="C2X-JU-WFJ"/>
+                <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" id="KKX-6Z-aqf"/>
+                <constraint firstItem="36" firstAttribute="bottom" secondItem="15" secondAttribute="top" id="Oqv-Qt-gZJ"/>
+                <constraint firstItem="27" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="Sev-pX-owz"/>
+                <constraint firstAttribute="trailing" secondItem="36" secondAttribute="trailing" id="bFN-9j-gva"/>
+                <constraint firstItem="6" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="bN7-1T-zi7"/>
+                <constraint firstItem="36" firstAttribute="top" secondItem="1" secondAttribute="top" id="eyC-zw-BVf"/>
+                <constraint firstItem="40" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ezU-ee-4cT"/>
+                <constraint firstItem="27" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="ney-vu-eB6"/>
+                <constraint firstAttribute="bottom" secondItem="15" secondAttribute="bottom" id="p42-j2-9j5"/>
+                <constraint firstItem="6" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="qZo-l3-UTK"/>
+                <constraint firstItem="15" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="x3Z-w3-kz5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Misc_BackButton" width="13" height="12"/>
+    </resources>
+</document>
